@@ -1,0 +1,22 @@
+
+<md-grid-list cols="2" rowHeight="2:1">
+  <h2>{{questions[question_num][0]}}</h2>
+
+
+  <md-grid-tile id="A" (click)="clicked($event)" *ngIf="questions[question_num][6] == 'true'; else isText">
+      <img src ={{questions[question_num][1]}}>
+  </md-grid-tile>
+  <ng-template #isText>
+      <md-grid-tile id="A" (click)="clicked($event)">
+          {{questions[question_num][1]}}
+      </md-grid-tile>
+  </ng-template>
+
+
+  <md-grid-tile id="B" (click)="clicked($event)">{{questions[question_num][2]}}</md-grid-tile>
+  <md-grid-tile id="C" (click)="clicked($event)">{{questions[question_num][3]}}</md-grid-tile>
+  <md-grid-tile id="D" (click)="clicked($event)">{{questions[question_num][4]}}</md-grid-tile>
+  
+</md-grid-list>
+
+

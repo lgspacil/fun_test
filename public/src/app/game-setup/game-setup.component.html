@@ -1,0 +1,19 @@
+  <md-card class="container" *ngIf="show_game == false">
+    <h1>Game Difficulty: {{level}}</h1>
+  
+    <form class="example-form">
+      <md-form-field class="example-full-width">
+        <input mdInput placeholder="Enter Name" name="name" required [(ngModel)]="user_info.name">
+      </md-form-field>
+    </form>
+
+    <h2>Slide the bar to the amount of time you want for each question</h2>
+    <md-slider min="4" max="15" step="1" value="10" [(ngModel)]="user_info.value" (change)="runChange()"></md-slider>
+    <h2>{{user_info.value}} Seconds</h2>
+
+    <button (click)="submitTimeName()">Start Game!!</button>
+
+   
+  </md-card>
+
+  <app-game-play *ngIf="show_game == true" [user_info]="user_info" (reTakeButtonClicked)="reTakeButtonClicked($event)"> </app-game-play>

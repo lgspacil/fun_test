@@ -1,0 +1,46 @@
+<md-card class="container">
+    <h1>Welcome: {{users_name}}</h1>
+    <h1>Time Limit {{time_limit}} seconds</h1>
+
+    <md-grid-list cols="2" rowHeight="2:1">
+    <h2>{{questions[question_num][0]}}</h2>
+
+
+    <md-grid-tile id="A" (click)="clicked($event)" *ngIf="questions[question_num][6] == 'true'; else isTextA">
+        <img style="width: 100%; height: 100%" src ={{questions[question_num][1]}}>
+    </md-grid-tile>
+    <ng-template #isTextA>
+        <md-grid-tile id="A" (click)="clicked($event)">
+            {{questions[question_num][1]}}
+        </md-grid-tile>
+    </ng-template>
+
+    <md-grid-tile id="B" (click)="clicked($event)" *ngIf="questions[question_num][6] == 'true'; else isTextB">
+        <img style="width: 100%; height: 100%" src ={{questions[question_num][2]}}>
+    </md-grid-tile>
+    <ng-template #isTextB>
+        <md-grid-tile id="B" (click)="clicked($event)">
+            {{questions[question_num][2]}}
+        </md-grid-tile>
+    </ng-template>
+
+    <md-grid-tile id="C" (click)="clicked($event)" *ngIf="questions[question_num][6] == 'true'; else isTextC">
+        <img style="width: 100%; height: 100%" src ={{questions[question_num][3]}}>
+    </md-grid-tile>
+    <ng-template #isTextC>
+        <md-grid-tile id="C" (click)="clicked($event)">
+            {{questions[question_num][3]}}
+        </md-grid-tile>
+    </ng-template>
+        
+    <md-grid-tile id="D" (click)="clicked($event)" *ngIf="questions[question_num][6] == 'true'; else isTextD">
+        <img style="width: 100%; height: 100%" src ={{questions[question_num][4]}}>
+    </md-grid-tile>
+    <ng-template #isTextD>
+        <md-grid-tile id="D" (click)="clicked($event)">
+            {{questions[question_num][4]}}
+        </md-grid-tile>
+    </ng-template>
+    </md-grid-list>   
+</md-card>
+

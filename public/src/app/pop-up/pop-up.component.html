@@ -1,0 +1,12 @@
+  <h1 md-dialog-title> {{data.message}}!</h1>
+  <h2 md-dialog-title *ngIf='data.percent'>Game Stats</h2>
+
+
+  <h3 *ngIf='data.percent'>Your Score: {{data.percent}}%</h3>
+  <h3 *ngIf='data.total_time'>Total Time: {{data.total_time}} seconds</h3>
+
+  
+  <button md-raised-button (click)="onCloseConfirm()">Take Test Again!</button>
+  
+  
+

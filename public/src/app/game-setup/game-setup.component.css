@@ -1,0 +1,23 @@
+md-slider {
+    width: 100%;
+  }
+
+.container{
+  background-color: #9fcac7;
+  text-align: center;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+button{
+  width: 100%;
+  font-size: 26px;
+}
